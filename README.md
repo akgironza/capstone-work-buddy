@@ -12,7 +12,7 @@ An app for users to efficiently track their tasks at work to improve productivit
 HTML, CSS, JavaScript, TypeScript, Next.js, Prisma, tRPC, PostgreSQL, PlanetScale
 
 ## Entity-Relationship Diagram
-![Picture of ERD](/work-buddy/CAPSTONE-files/data_model_v2_ga-seir.png)
+![Picture of ERD](/CAPSTONE-files/data_model_v2_ga-seir.png)
 
 ## List of Backend API Routes
 
