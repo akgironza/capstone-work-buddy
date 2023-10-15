@@ -1,28 +1,44 @@
-# Create T3 App
+# **Work Buddy**
+## **Capstone Project by Arielle Gironza**
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+[**Link to GitHub**](https://github.com/akgironza/capstone-work-buddy)
+[**Link to Deployed Site**]()
+[**Link to Trello**](https://trello.com/b/H5RhqRA5/capstone-ga-seir)
 
-## What's next? How do I make an app with this?
+## Project Description
+An app for users to efficiently track their tasks at work to improve productivity and track value add of their work. Users log and track the status of weekly to-dos, follow-ups, unplanned asks, and weekly accomplishments. 
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+## Technologies Used
+HTML, CSS, JavaScript, TypeScript, Next.js, Prisma, tRPC, PostgreSQL, PlanetScale
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Entity-Relationship Diagram
+![Picture of ERD](/work-buddy/CAPSTONE-files/data_model_v2_ga-seir.png)
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+## List of Backend API Routes
 
-## Learn More
+### ROUTES
+|ENDPOINT|METHOD|PURPOSE|
+|--------|------|-------|
+|/thing|GET|Index - Show all things|
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+## List of Endpoints/Routes
+|PATH|METHOD|PURPOSE|
+|--------|------|-------|
+|/thing|GET|Index - Show all things|
+|/thing|GET|New - Render form to create a new thing|
+|/thing/:id|DELETE|Destroy - Delete a thing|
+|/thing/:id|PUT|Update - Update a thing|
+|/thing|POST|Create - Create a new thing|
+|/thing/:id|GET|Edit - Render form to update a thing|
+|/thing/:id|GET|Show - Show one thing|
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
 
-## How do I deploy this?
+## Mockup of User Interface
+### **Desktop Views**
+![Desktop view of Index page]()
+![Desktop view of Show page]()
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+### **Mobile Views**
+![Mobile view of Index page]()
+![Mobile view of Show page]()
