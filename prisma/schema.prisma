@@ -1,22 +1,91 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
+// Database source
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
   relationMode = "prisma"
 }
 
-
+// Client generator
 generator client {
   provider = "prisma-client-js"
 }
 
-model Example {
-    id        Int      @id @default(autoincrement())
-    name      String
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
+// Database models
+model Todo {
+  id String @id @default(uuid())
+  weeklyTaskGroupId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  task String
+  priority Int
+  progressStatus String
+  valueAdd String
 
-    @@index([name])
+  weeklyTaskGroup WeeklyTaskGroup @relation(fields: [weeklyTaskGroupId], references: [id], onDelete: Cascade)
+
+  @@index([weeklyTaskGroupId])
+}
+
+model FollowUp {
+  id String @id @default(uuid())
+  weeklyTaskGroupId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  task String
+  priority Int
+  progressStatus String
+  stakeholder String
+
+  weeklyTaskGroup WeeklyTaskGroup @relation(fields: [weeklyTaskGroupId], references: [id], onDelete: Cascade)
+
+  @@index([weeklyTaskGroupId])
+}
+
+model UnplannedAsk {
+  id String @id @default(uuid())
+  weeklyTaskGroupId String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  task String
+  priority Int
+  progressStatus String
+  valueAdd String
+
+  weeklyTaskGroup WeeklyTaskGroup @relation(fields: [weeklyTaskGroupId], references: [id], onDelete: Cascade)
+
+  @@index([weeklyTaskGroupId])
+}
+
+model Accomplishment {
+  id String @id @default(uuid())
+  weeklyTaskGroupId String
+  createdAt DateTime @default(now())
+  task String
+
+  weeklyTaskGroup WeeklyTaskGroup @relation(fields: [weeklyTaskGroupId], references: [id], onDelete: Cascade)
+
+  @@index([weeklyTaskGroupId])
+}
+
+model WeeklyTaskGroup {
+  id String @id @default(uuid())
+  userId String
+  todos Todo[]
+  followUps FollowUp[]
+  unplannedAsks UnplannedAsk[]
+  accomplishments Accomplishment[]
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model User {
+  id String @id @default(uuid())
+  name String @unique
+  password String
+  weeklyTaskGroups WeeklyTaskGroup[]
 }
