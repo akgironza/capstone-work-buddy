@@ -1,8 +1,8 @@
 # **Work Buddy**
 ## **Capstone Project by Arielle Gironza**
 
-[**Link to GitHub**](https://github.com/akgironza/capstone-work-buddy)
-[**Link to Deployed Site**](https://capstone-work-buddy.vercel.app/)
+[**Link to GitHub**](https://github.com/akgironza/capstone-work-buddy) 
+[**Link to Deployed Site**](https://capstone-work-buddy.vercel.app/) 
 [**Link to Trello**](https://trello.com/b/H5RhqRA5/capstone-ga-seir)
 
 ## Project Description
