@@ -5,7 +5,7 @@
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
-  relationMode = "prisma"
+  relationMode = "foreignKeys"
 }
 
 // Client generator
@@ -73,6 +73,7 @@ model Accomplishment {
 model WeeklyTaskGroup {
   id String @id @default(uuid())
   userId String
+  week DateTime
   todos Todo[]
   followUps FollowUp[]
   unplannedAsks UnplannedAsk[]
