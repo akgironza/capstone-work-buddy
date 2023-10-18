@@ -1,12 +1,14 @@
 import Head from "next/head";
 import Link from "next/link";
 import { date } from "zod";
+import FollowUps from "~/components/followups";
+import Todos from "~/components/todos";
 import { tasksRouter } from "~/server/api/routers/tasksRouter";
 
 import { api } from "~/utils/api";
 
 export default function Home() {
-  const { data } = api.tasks.getAll.useQuery();
+  const { data } = api.tasks.getAllTodos.useQuery();
   //console.log(data)
 
   return (
@@ -17,10 +19,8 @@ export default function Home() {
     {/* <link rel="icon" href="/favicon.ico" /> */}
     </Head>
     <h1>Work Buddy</h1>
-    <div className="border border-amber-700">
-      {/* <h1>Work Buddy</h1> */}
-      {data?.map((todo) => (<div key={todo.id}>{todo.task}</div>))}
-    </div>
+    <Todos/>
+    <FollowUps/>
     </>
   );
 }

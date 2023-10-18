@@ -10,13 +10,16 @@ export const tasksRouter = createTRPCRouter({
   //       greeting: `Hello ${input.text}`,
   //     };
   //   }),
-  getAll: publicProcedure.query(({ ctx }) => {
-    return (
-      ctx.db.todo.findMany()
-      // ,
-      // ctx.db.followUp.findMany(),
-      // ctx.db.unplannedAsk.findMany(),
-      // ctx.db.accomplishment.findMany()
-    )
+  getAllTodos: publicProcedure.query(({ ctx }) => {
+    return ctx.db.todo.findMany()
   }),
+  getAllFollowUps: publicProcedure.query(({ ctx }) => {
+    return ctx.db.followUp.findMany()
+  }),
+  getAllUnplannedAsks: publicProcedure.query(({ ctx }) => {
+    return ctx.db.unplannedAsk.findMany()
+  }),
+  getAllAccomplishments: publicProcedure.query(({ ctx }) => {
+    return ctx.db.accomplishment.findMany()
+  })
 });
