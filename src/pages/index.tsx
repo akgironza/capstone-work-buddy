@@ -10,14 +10,13 @@ import { tasksRouter } from "~/server/api/routers/tasksRouter";
 import { api } from "~/utils/api";
 
 export default function Home() {
-  const { data } = api.tasks.getAllTodos.useQuery();
+  // const { data } = api.tasks.getAllTodos.useQuery();
   //console.log(data)
 
   return (
     <>
     <Head>
     <title>Work Buddy</title>
-    {/* <meta name="description" content="Work Buddy task tracker" /> */}
     {/* <link rel="icon" href="/favicon.ico" /> */}
     </Head>
     <h1>Work Buddy</h1>

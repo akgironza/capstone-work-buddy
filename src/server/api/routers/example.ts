@@ -13,10 +13,6 @@ export const exampleRouter = createTRPCRouter({
   getAll: publicProcedure.query(({ ctx }) => {
     return (
       ctx.db.todo.findMany()
-      // ,
-      // ctx.db.followUp.findMany(),
-      // ctx.db.unplannedAsk.findMany(),
-      // ctx.db.todo.findMany()
     )
   }),
 });
