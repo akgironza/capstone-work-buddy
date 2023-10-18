@@ -12,8 +12,11 @@ An app for users to efficiently track their tasks at work to improve productivit
 
 
 ## Technologies Used
-HTML, CSS, JavaScript, TypeScript, Next.js, React, Prisma, tRPC, PostgreSQL, Neon, Tailwind, Vercel
-
+HTML, CSS, JavaScript, TypeScript, Next.js, React, Prisma, tRPC, PostgreSQL, Neon, Tailwind, Vercel, create-t3-app
+[Prisma docs](https://www.prisma.io/docs/getting-started)
+[tRPC docs](https://trpc.io/docs)
+[tailwindcss docs](https://tailwindcss.com/docs/installation)
+[create-t3-app docs](https://create.t3.gg/en/introduction)
 
 ## Entity-Relationship Diagram
 ![Picture of ERD](/CAPSTONE-files/data_model_v3_ga-seir.png)
