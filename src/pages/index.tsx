@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { date } from "zod";
+import Accomplishments from "~/components/accomplishments";
 import FollowUps from "~/components/followups";
 import Todos from "~/components/todos";
 import UnplannedAsks from "~/components/unplannedasks";
@@ -23,6 +24,7 @@ export default function Home() {
     <Todos/>
     <FollowUps/>
     <UnplannedAsks/>
+    <Accomplishments/>
     </>
   );
 }
