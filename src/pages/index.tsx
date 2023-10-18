@@ -19,7 +19,7 @@ export default function Home() {
       <title>Work Bestie</title>
       {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      <div className="flex space-x-80">
+      <div className="flex justify-evenly space-x-80">
         <h1 className="text-3xl my-6 ">Work Bestie</h1>
         <h1 className="text-3xl my-6 ">Week: ##/##/## to ##/##/##</h1>
       </div>
