@@ -9,13 +9,12 @@ import Head from "next/head";
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <>
-    <Head>
+    {/* <Head>
       <title>Work Buddy</title>
       <meta name="description" content="Work Buddy task tracker" />
       <link rel="icon" href="/favicon.ico" />
-    </Head>
+    </Head> */}
     <Component {...pageProps} />
-    <link rel="icon" href="/favicon.ico" />
     </>
 )};
 
