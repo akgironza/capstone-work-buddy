@@ -8,9 +8,12 @@ export default function Accomplishments() {
 
   return (
     <>
-    <div className="border border-amber-700">
-    {data?.map((accomplishment) => 
+    <div className="my-6">
+        <h2 className="text-2xl">Accomplishments</h2>
+        <div className="border border-amber-700">
+        {data?.map((accomplishment) => 
             (<div key={accomplishment.id}>{accomplishment.task}</div>))}
+      </div>
     </div>
     {/* <div className="border border-amber-700"> */}
     {/* <table className="border border-black">

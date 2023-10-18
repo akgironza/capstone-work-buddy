@@ -5,8 +5,11 @@ export default function FollowUps() {
   //console.log(data)
 
   return (
-    <div className="border border-amber-700">
-      {data?.map((followUp) => (<div key={followUp.id}>{followUp.task}</div>))}
+    <div className="my-6">
+        <h2 className="text-2xl">Follow Ups</h2>
+        <div className="border border-amber-700">
+            {data?.map((followUp) => (<div key={followUp.id}>{followUp.task}</div>))}
+      </div>
     </div>
   );
 }

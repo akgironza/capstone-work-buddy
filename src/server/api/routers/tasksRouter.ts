@@ -23,3 +23,5 @@ export const tasksRouter = createTRPCRouter({
     return ctx.db.accomplishment.findMany()
   })
 });
+
+// export type TasksRouter = typeof tasksRouter; 

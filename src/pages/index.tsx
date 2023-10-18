@@ -15,11 +15,14 @@ export default function Home() {
 
   return (
     <>
-    <Head>
-    <title>Work Buddy</title>
-    {/* <link rel="icon" href="/favicon.ico" /> */}
-    </Head>
-    <h1>Work Buddy</h1>
+      <Head>
+      <title>Work Bestie</title>
+      {/* <link rel="icon" href="/favicon.ico" /> */}
+      </Head>
+      <div className="flex space-x-80">
+        <h1 className="text-3xl my-6 ">Work Bestie</h1>
+        <h1 className="text-3xl my-6 ">Week: ##/##/## to ##/##/##</h1>
+      </div>
     <Todos/>
     <FollowUps/>
     <UnplannedAsks/>
