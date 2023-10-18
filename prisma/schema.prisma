@@ -15,69 +15,55 @@ generator client {
 
 // Database models
 model Todo {
-  id String @id @default(uuid())
-  weeklyTaskGroupId String
+  id Int @id @default(autoincrement())
+  userId Int
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  updatedAt DateTime @updatedAt @default(now())
   task String
   priority Int
   progressStatus String
   valueAdd String
 
-  weeklyTaskGroup WeeklyTaskGroup @relation(fields: [weeklyTaskGroupId], references: [id], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  @@index([weeklyTaskGroupId])
+  @@index([userId])
 }
 
 model FollowUp {
-  id String @id @default(uuid())
-  weeklyTaskGroupId String
+  id Int @id @default(autoincrement())
+  userId Int
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  updatedAt DateTime @updatedAt @default(now())
   task String
   priority Int
   progressStatus String
   stakeholder String
 
-  weeklyTaskGroup WeeklyTaskGroup @relation(fields: [weeklyTaskGroupId], references: [id], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  @@index([weeklyTaskGroupId])
+  @@index([userId])
 }
 
 model UnplannedAsk {
-  id String @id @default(uuid())
-  weeklyTaskGroupId String
+  id Int @id @default(autoincrement())
+  userId Int
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  updatedAt DateTime @updatedAt @default(now())
   task String
   priority Int
   progressStatus String
   valueAdd String
 
-  weeklyTaskGroup WeeklyTaskGroup @relation(fields: [weeklyTaskGroupId], references: [id], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  @@index([weeklyTaskGroupId])
+  @@index([userId])
 }
 
 model Accomplishment {
-  id String @id @default(uuid())
-  weeklyTaskGroupId String
+  id Int @id @default(autoincrement())
+  userId Int
   createdAt DateTime @default(now())
   task String
-
-  weeklyTaskGroup WeeklyTaskGroup @relation(fields: [weeklyTaskGroupId], references: [id], onDelete: Cascade)
-
-  @@index([weeklyTaskGroupId])
-}
-
-model WeeklyTaskGroup {
-  id String @id @default(uuid())
-  userId String
-  week DateTime
-  todos Todo[]
-  followUps FollowUp[]
-  unplannedAsks UnplannedAsk[]
-  accomplishments Accomplishment[]
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
@@ -85,8 +71,11 @@ model WeeklyTaskGroup {
 }
 
 model User {
-  id String @id @default(uuid())
+  id Int @id @default(autoincrement())
   name String @unique
   password String
-  weeklyTaskGroups WeeklyTaskGroup[]
+  todos Todo[]
+  followUps FollowUp[]
+  unplannedAsks UnplannedAsk[]
+  accomplishments Accomplishment[]
 }
