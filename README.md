@@ -2,43 +2,46 @@
 ## **Capstone Project by Arielle Gironza**
 
 [**Link to GitHub**](https://github.com/akgironza/capstone-work-buddy) 
+
 [**Link to Deployed Site**](https://capstone-work-buddy.vercel.app/) 
+
 [**Link to Trello**](https://trello.com/b/H5RhqRA5/capstone-ga-seir)
 
 ## Project Description
-An app for users to efficiently track their tasks at work to improve productivity and track value add of their work. Users log and track the status of weekly to-dos, follow-ups, unplanned asks, and weekly accomplishments. 
+An app for users to efficiently track their tasks at work to improve productivity and track value add of their work. Users log and track the status of weekly to-dos, follow-ups, unplanned asks, and accomplishments. Within these categories, users can also assign priorities and progress status to organize their work more efficiently, as well as the value add of their work to reflect on relevance, and for later reference to quantify their contributions at their workplace.
+
 
 ## Technologies Used
-HTML, CSS, JavaScript, TypeScript, Next.js, Prisma, tRPC, PostgreSQL, PlanetScale
+HTML, CSS, JavaScript, TypeScript, Next.js, React, Prisma, tRPC, PostgreSQL, Neon, Tailwind, Vercel
+
 
 ## Entity-Relationship Diagram
-![Picture of ERD](/CAPSTONE-files/data_model_v2_ga-seir.png)
-
-## List of Backend API Routes
-
-### ROUTES
-|ENDPOINT|METHOD|PURPOSE|
-|--------|------|-------|
-|/thing|GET|Index - Show all things|
+![Picture of ERD](/CAPSTONE-files/data_model_v3_ga-seir.png)
 
 
-## List of Endpoints/Routes
+## List of Backend Routes/Endpoints
 |PATH|METHOD|PURPOSE|
 |--------|------|-------|
-|/thing|GET|Index - Show all things|
-|/thing|GET|New - Render form to create a new thing|
-|/thing/:id|DELETE|Destroy - Delete a thing|
-|/thing/:id|PUT|Update - Update a thing|
-|/thing|POST|Create - Create a new thing|
-|/thing/:id|GET|Edit - Render form to update a thing|
-|/thing/:id|GET|Show - Show one thing|
+|/weeklytasks|GET|Index - Show all tasks of all types for one week|
+|/weeklytasks/:group|GET|Index - Show all tasks of one type|
+|/weeklytasks/:id|DELETE|Destroy - Delete a task|
+|/weeklytasks/:id|PUT|Update - Update a task|
+|/weeklytasks|POST|Create - Create a new task|
+|/weeklytasks/:id|GET|Show - Show one task|
 
 
-## Mockup of User Interface
-### **Desktop Views**
-![Desktop view of Index page]()
-![Desktop view of Show page]()
+## List of React Routes
+|PATH|METHOD|PURPOSE|
+|--------|------|-------|
+|/weeklytasks|GET|Index - Show all tasks of all types for one week|
+|/weeklytasks/:group|GET|Index - Show all tasks of one type|
+|/weeklytasks|GET|New - Render form to create a new task|
+|/weeklytasks/:id|DELETE|Destroy - Delete a task|
+|/weeklytasks/:id|PUT|Update - Update a task|
+|/weeklytasks|POST|Create - Create a new task|
+|/weeklytasks/:id|GET|Edit - Render form to update a task|
+|/weeklytasks/:id|GET|Show - Show one task|
 
-### **Mobile Views**
-![Mobile view of Index page]()
-![Mobile view of Show page]()
+
+## Wireframe of User Interface
+![Desktop view of Index pages](/CAPSTONE-files/capstone-wireframe-v1.png)
