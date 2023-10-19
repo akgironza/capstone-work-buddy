@@ -12,11 +12,13 @@ An app for users to efficiently track their tasks at work to improve productivit
 
 
 ## Technologies Used
-HTML, CSS, JavaScript, TypeScript, Next.js, React, Prisma, tRPC, PostgreSQL, Neon, Tailwind, Vercel, create-t3-app
+HTML, CSS, JavaScript, TypeScript, Next.js, React, Prisma, tRPC, , Zod, PostgreSQL, Neon, Tailwind, Vercel, create-t3-app
 
 [Prisma docs](https://www.prisma.io/docs/getting-started)
 
 [tRPC docs](https://trpc.io/docs)
+
+[Zod docs](https://zod.dev/?id=introduction)
 
 [tailwindcss docs](https://tailwindcss.com/docs/installation)
 
@@ -53,3 +55,9 @@ HTML, CSS, JavaScript, TypeScript, Next.js, React, Prisma, tRPC, PostgreSQL, Neo
 
 ## Wireframe of User Interface
 ![Desktop view of Index pages](/CAPSTONE-files/capstone-wireframe-v1.png)
+
+## Features & Functionality to Come
+- Users can view their weekly tasks grouped by week on the main page
+- Index pages by groups of tasks
+- CRUD functionality for
+- NextAuth

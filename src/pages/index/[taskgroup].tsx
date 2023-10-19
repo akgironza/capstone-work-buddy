@@ -9,8 +9,10 @@
 
 // import { api } from "~/utils/api";
 
-// export default function TaskGroup() {
-//   // const { data } = api.tasks.getAllTodos.useQuery();
+export default function TaskGroup() {
+    return <h1>Task Group</h1>
+};
+    //   // const { data } = api.tasks.getAllTodos.useQuery();
 //   //console.log(data)
 
 //   return (
